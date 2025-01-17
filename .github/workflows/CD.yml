@@ -32,4 +32,4 @@ jobs:
       run: gcloud container clusters get-credentials jenkins-cluster --region us-central1 --project beaming-gadget-439605-q8
 
     - name: Deploy to GKE
-      run: helm install flask ./flask
+      run: helm upgrade --install flask ./flask --set tag=3.0.0
